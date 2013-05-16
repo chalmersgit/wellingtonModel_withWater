@@ -9,6 +9,6 @@
 #define RES_REFRACTION_FRAG		CINDER_RESOURCE( ../resources/, refraction_frag.glsl,	131, GLSL	)
 
 
-//#define RES_TEXTURE				CINDER_RESOURCE( ../resources/, texture.jpg,			132, JPG	)
+#define RES_TEXTURE				CINDER_RESOURCE( ../resources/, texture.jpg,			132, JPG	)
 
 

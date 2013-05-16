@@ -54,7 +54,7 @@ void waterModule::setup()
     {
         gl::Texture::Format format;
         format.setInternalFormat(GL_RGBA32F_ARB);
-        mTexture = gl::Texture(loadImage(loadResource(RES_WELLINGTON_IMG)));
+        mTexture = gl::Texture(loadImage(loadResource(RES_TEXTURE)));
         mTexture.setWrap(GL_REPEAT, GL_REPEAT);
     }
     

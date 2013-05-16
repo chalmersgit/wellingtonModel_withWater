@@ -71,15 +71,15 @@ void wellingtonModelApp::setup()
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     
-    //    myImage = gl::Texture(loadImage(loadResource("wellington.jpg")));
-    myImage = gl::Texture(loadImage(loadFile("/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel/resources/wellington.jpg")));
+//        myImage = gl::Texture(loadImage(loadResource(RES_WELLINGTON_IMG)));
+    myImage = gl::Texture(loadImage(loadFile("/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/resources/wellington.jpg")));
     
     
     //    mChannel = Channel32f(loadImage(loadResource("wellington.jpg")));
     //    mTexture = myImage;
     
     
-    ObjLoader loader(loadFile("/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel/resources/wellington01.obj"));
+    ObjLoader loader(loadFile("/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/resources/wellington01.obj"));
     loader.load(&mMesh);
     mVbo = gl::VboMesh(mMesh);
     
@@ -168,16 +168,16 @@ void wellingtonModelApp::draw()
     // clear out the window with black
 	gl::clear( Color( 0, 0, 0 ) );
     
-//    /*
+    /*
      if(mWaterModule != NULL){
      gl::pushMatrices();
      mWaterModule->draw();
      gl::popMatrices();
      }
-//     */
+     */
     
     
-    /*
+//    /*
     gl::setMatrices( mMayaCam.getCamera());
     
     gl::pushMatrices();
@@ -191,7 +191,7 @@ void wellingtonModelApp::draw()
     myImage.unbind();
     gl::popMatrices();
      
-     */
+//     */
     
  
     

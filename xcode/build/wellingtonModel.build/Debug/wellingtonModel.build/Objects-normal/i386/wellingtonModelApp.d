@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/oliverellmers/Desktop/Daly\ Projects/Project/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp \
+  /Users/oliverellmers/Desktop/Cinder\ Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp \
   ../../../../cinder_0.8.4_mac/include/cinder/app/AppBasic.h \
   ../../../../cinder_0.8.4_mac/include/cinder/app/App.h \
   ../../../../cinder_0.8.4_mac/include/cinder/Cinder.h \
@@ -511,6 +511,6 @@ dependencies: \
   ../../../../cinder_0.8.4_mac/include/cinder/Sphere.h \
   ../include/Resources.h \
   ../../../../cinder_0.8.4_mac/include/cinder/CinderResources.h \
-  /Users/oliverellmers/Desktop/Daly\ Projects/Project/wellingtonModel_withWater/xcode/../src/waterModule.h \
+  /Users/oliverellmers/Desktop/Cinder\ Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.h \
   ../../../../cinder_0.8.4_mac/include/cinder/gl/Fbo.h \
   ../../../../cinder_0.8.4_mac/include/cinder/gl/GlslProg.h

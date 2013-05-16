@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/oliverellmers/Desktop/Daly\ Projects/Project/wellingtonModel_withWater/xcode/../src/waterModule.cpp \
-  /Users/oliverellmers/Desktop/Daly\ Projects/Project/wellingtonModel_withWater/xcode/../src/waterModule.h \
+  /Users/oliverellmers/Desktop/Cinder\ Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.cpp \
+  /Users/oliverellmers/Desktop/Cinder\ Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.h \
   ../../../../cinder_0.8.4_mac/include/cinder/app/AppBasic.h \
   ../../../../cinder_0.8.4_mac/include/cinder/app/App.h \
   ../../../../cinder_0.8.4_mac/include/cinder/Cinder.h \
