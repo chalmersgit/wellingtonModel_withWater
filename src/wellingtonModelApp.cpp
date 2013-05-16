@@ -168,16 +168,16 @@ void wellingtonModelApp::draw()
     // clear out the window with black
 	gl::clear( Color( 0, 0, 0 ) );
     
-    /*
+//    /*
      if(mWaterModule != NULL){
      gl::pushMatrices();
      mWaterModule->draw();
      gl::popMatrices();
      }
-     */
+//     */
     
     
-//    /*
+    /*
     gl::setMatrices( mMayaCam.getCamera());
     
     gl::pushMatrices();
@@ -191,7 +191,7 @@ void wellingtonModelApp::draw()
     myImage.unbind();
     gl::popMatrices();
      
-//     */
+     */
     
  
     
