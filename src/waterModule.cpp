@@ -155,7 +155,7 @@ void waterModule::draw()
     //Draw mouse input into red channel
     if(mMouseDown){
         gl::color(ColorAf(1.0f, 0.0f, 0.0f, 1.0f));
-        gl::drawSolidCircle(Vec2f(mMouse), 5.0f, 32);
+        gl::drawSolidCircle(Vec2f(mMouse), 4.0f, 32);
         gl::color(Color::white());
     }
     
