@@ -62,22 +62,12 @@ void wellingtonModelApp::resize(ResizeEvent event)
 void wellingtonModelApp::setup()
 {
     
-    //Set flags                     <-water module
-    mMouse = Vec2i::zero();
-    mMouseDown = false;
-    
-    
     //setFullScreen(true);
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     
-//        myImage = gl::Texture(loadImage(loadResource(RES_WELLINGTON_IMG)));
+//        myImage = gl::Texture(loadImage(loadResource(RES_WELLINGTON_IMG))); //TODO: get resources working properly
     myImage = gl::Texture(loadImage(loadFile("/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/resources/wellington.jpg")));
-    
-    
-    //    mChannel = Channel32f(loadImage(loadResource("wellington.jpg")));
-    //    mTexture = myImage;
-    
     
     ObjLoader loader(loadFile("/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/resources/wellington01.obj"));
     loader.load(&mMesh);
@@ -113,28 +103,6 @@ void wellingtonModelApp::mouseDrag(MouseEvent event)
 		mArcball.mouseDrag( event.getPos() );
 //     */
 }
-
-//TODO: bring mouse events in from waterModule to here
-
-/*
- void banTheRewindApp::mouseDown(MouseEvent event)
- {
- mMouseDown = true;
- mouseDrag(event);
- }
- 
- void banTheRewindApp::mouseDrag(MouseEvent event)
- {
- mMouse = event.getPos();
- }
- 
- void banTheRewindApp::mouseUp(MouseEvent event)
- {
- mMouseDown = false;
- }
- 
- */
-
 
 void wellingtonModelApp::frameCurrentObject()
 {
