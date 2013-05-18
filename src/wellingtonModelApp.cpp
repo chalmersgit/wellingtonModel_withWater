@@ -61,12 +61,6 @@ void wellingtonModelApp::resize(ResizeEvent event)
 
 void wellingtonModelApp::setup()
 {
-    
-    //Set flags                     <-water module
-    mMouse = Vec2i::zero();
-    mMouseDown = false;
-    
-    
     //setFullScreen(true);
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
