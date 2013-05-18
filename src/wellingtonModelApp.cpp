@@ -94,24 +94,24 @@ void wellingtonModelApp::setup()
 
 void wellingtonModelApp::mouseDown( MouseEvent event )
 {
-//    /*
+    /*
     if( event.isAltDown() )
 		mMayaCam.mouseDown( event.getPos() );
 	else
 		mArcball.mouseDown( event.getPos() );
-//     */
+     */
 }
 
 void wellingtonModelApp::mouseDrag(MouseEvent event)
 {
-//    /*
+    /*
     mouseMove(event);
     
     if( event.isAltDown() )
 		mMayaCam.mouseDrag( event.getPos(), event.isLeftDown(), event.isMiddleDown(), event.isRightDown() );
 	else
 		mArcball.mouseDrag( event.getPos() );
-//     */
+     */
 }
 
 //TODO: bring mouse events in from waterModule to here

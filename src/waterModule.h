@@ -7,10 +7,11 @@
 #include "cinder/gl/Texture.h"
 
 
-class waterModule{
+class WaterModule{
 public:
-    waterModule();
+    WaterModule();
     void draw();
+    void keyDown(ci::app::KeyEvent event);
     void mouseDown(ci::app::MouseEvent event);
     void mouseDrag(ci::app::MouseEvent event);
     void mouseUp(ci::app::MouseEvent event);
@@ -31,10 +32,10 @@ private:
     //Refraction texture
     ci::gl::Texture mTexture;
     
-    //Mouse
+    //Mouse             //TODO: bring to main app level
     ci::Vec2i mMouse;
     bool mMouseDown;
     
     //True renders input to screen
-    bool mShowInput;                  //TODO: bring to main app level
+    bool mShowInput;
 };

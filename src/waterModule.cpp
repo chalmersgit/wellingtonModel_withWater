@@ -11,25 +11,35 @@ using namespace std;
 const Vec2i kWindowSize = Vec2i(1280, 720);
 const Vec2f kPixel = Vec2f::one() / Vec2f(kWindowSize);
 
-waterModule::waterModule(){} //TODO: change all to upperclass W for constructors
+WaterModule::WaterModule(){}
 
-void waterModule::mouseDown(MouseEvent event)
+void WaterModule::mouseDown(MouseEvent event)
 {
     mMouseDown = true;
     mouseDrag(event);
 }
 
-void waterModule::mouseDrag(MouseEvent event)
+void WaterModule::keyDown(KeyEvent event)
+{
+    switch(event.getCode()){
+        case KeyEvent::KEY_i:
+            mShowInput = !mShowInput;
+            break;
+    }
+}
+
+void WaterModule::mouseDrag(MouseEvent event)
 {
     mMouse = event.getPos();
 }
 
-void waterModule::mouseUp(MouseEvent event)
+void WaterModule::mouseUp(MouseEvent event)
 {
     mMouseDown = false;
 }
 
-void waterModule::setup()
+
+void WaterModule::setup()
 {
     //Set flags                     TODO:bring to main app level
     mMouse = Vec2i::zero();
@@ -78,7 +88,7 @@ void waterModule::setup()
     }
 }
 
-void waterModule::drawFullScreenRect()
+void WaterModule::drawFullScreenRect()
 {
     //Begin drawing
     gl::begin(GL_TRIANGLES);
@@ -115,7 +125,7 @@ void waterModule::drawFullScreenRect()
     gl::end();
 }
 
-void waterModule::draw()
+void WaterModule::draw()
 {
     
     //GPGPU pass
