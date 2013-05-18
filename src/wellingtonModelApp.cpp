@@ -37,7 +37,7 @@ class wellingtonModelApp : public AppBasic {
     Arcball mArcball;
     MayaCamUI mMayaCam;
     
-    waterModule *mWaterModule;
+    WaterModule *mWaterModule;
     
     //Mouse
     ci::Vec2i mMouse;
@@ -88,7 +88,7 @@ void wellingtonModelApp::setup()
     mMayaCam.setCurrentCam( initialCam );
     
     
-    mWaterModule = new waterModule();
+    mWaterModule = new WaterModule();
     mWaterModule->setup();
 }
 
@@ -100,6 +100,7 @@ void wellingtonModelApp::mouseDown( MouseEvent event )
 	else
 		mArcball.mouseDown( event.getPos() );
      */
+    mWaterModule->mouseDown( event );
 }
 
 void wellingtonModelApp::mouseDrag(MouseEvent event)
@@ -112,28 +113,8 @@ void wellingtonModelApp::mouseDrag(MouseEvent event)
 	else
 		mArcball.mouseDrag( event.getPos() );
      */
+    mWaterModule->mouseDrag(event);
 }
-
-//TODO: bring mouse events in from waterModule to here
-
-/*
- void banTheRewindApp::mouseDown(MouseEvent event)
- {
- mMouseDown = true;
- mouseDrag(event);
- }
- 
- void banTheRewindApp::mouseDrag(MouseEvent event)
- {
- mMouse = event.getPos();
- }
- 
- void banTheRewindApp::mouseUp(MouseEvent event)
- {
- mMouseDown = false;
- }
- 
- */
 
 
 void wellingtonModelApp::frameCurrentObject()
@@ -155,8 +136,7 @@ void wellingtonModelApp::keyDown(KeyEvent event)
 }
 
 void wellingtonModelApp::update()
-{
-}
+{}
 
 void wellingtonModelApp::draw()
 {
