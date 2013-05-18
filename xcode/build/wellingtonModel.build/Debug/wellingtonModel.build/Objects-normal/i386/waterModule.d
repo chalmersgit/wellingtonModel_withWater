@@ -494,24 +494,7 @@ dependencies: \
   ../../../../cinder_0.8.4_mac/include/cinder/gl/Fbo.h \
   ../../../../cinder_0.8.4_mac/include/cinder/gl/Texture.h \
   ../../../../cinder_0.8.4_mac/include/cinder/gl/GlslProg.h \
-  /Users/oliverellmers/Desktop/Cinder\ Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp \
-  ../../../../cinder_0.8.4_mac/include/cinder/ObjLoader.h \
-  ../../../../cinder_0.8.4_mac/include/cinder/TriMesh.h \
-  ../../../../cinder_0.8.4_mac/include/cinder/DataTarget.h \
-  ../../../../cinder_0.8.4_mac/boost/boost/tuple/tuple_comparison.hpp \
-  ../../../../cinder_0.8.4_mac/boost/boost/tuple/tuple.hpp \
-  ../../../../cinder_0.8.4_mac/boost/boost/tuple/detail/tuple_basic.hpp \
-  ../../../../cinder_0.8.4_mac/boost/boost/type_traits/cv_traits.hpp \
-  ../../../../cinder_0.8.4_mac/boost/boost/type_traits/add_volatile.hpp \
-  ../../../../cinder_0.8.4_mac/boost/boost/type_traits/add_cv.hpp \
-  ../../../../cinder_0.8.4_mac/boost/boost/type_traits/remove_volatile.hpp \
-  ../../../../cinder_0.8.4_mac/boost/boost/type_traits/function_traits.hpp \
-  ../../../../cinder_0.8.4_mac/boost/boost/utility/swap.hpp \
   ../../../../cinder_0.8.4_mac/include/cinder/ImageIo.h \
-  ../../../../cinder_0.8.4_mac/include/cinder/gl/Vbo.h \
-  ../../../../cinder_0.8.4_mac/include/cinder/Arcball.h \
-  ../../../../cinder_0.8.4_mac/include/cinder/MayaCamUI.h \
-  ../../../../cinder_0.8.4_mac/include/cinder/Camera.h \
-  ../../../../cinder_0.8.4_mac/include/cinder/Sphere.h \
+  ../../../../cinder_0.8.4_mac/include/cinder/DataTarget.h \
   ../include/Resources.h \
   ../../../../cinder_0.8.4_mac/include/cinder/CinderResources.h

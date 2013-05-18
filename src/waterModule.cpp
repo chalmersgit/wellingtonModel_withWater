@@ -1,6 +1,5 @@
 
 #include "waterModule.h"
-#include "wellingtonModelApp.cpp"
 
 #include "cinder/ImageIo.h"
 #include "Resources.h"
@@ -79,7 +78,7 @@ void waterModule::setup()
     }
 }
 
-void waterModule::drawFullScreenRect() //TODO: make the mesh 2158 × 1540 pixels to match mesh
+void waterModule::drawFullScreenRect()
 {
     //Begin drawing
     gl::begin(GL_TRIANGLES);

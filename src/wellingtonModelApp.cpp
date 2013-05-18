@@ -20,7 +20,7 @@ class wellingtonModelApp : public AppBasic {
     void prepareSettings( Settings *settings );
 	void setup();
     void resize(ResizeEvent event);
-    void mouseDown(MouseEvent event); //TODO: send mouse input for water shader down to waterModule.cpp
+    void mouseDown(MouseEvent event);
     void mouseDrag( MouseEvent event );
 //    void mouseUp( MouseEvent event );
     void keyDown( KeyEvent event );
@@ -62,8 +62,8 @@ void wellingtonModelApp::resize(ResizeEvent event)
 void wellingtonModelApp::setup()
 {
     
-    //Set flags
-    mMouse = Vec2i::zero(); //NOTE: mouse interaction for waterModule
+    //Set flags                     <-water module
+    mMouse = Vec2i::zero();
     mMouseDown = false;
     
     
@@ -92,7 +92,7 @@ void wellingtonModelApp::setup()
     mWaterModule->setup();
 }
 
-void wellingtonModelApp::mouseDown( MouseEvent event ) //TODO: send mouse input for water shader down to waterModule.cpp
+void wellingtonModelApp::mouseDown( MouseEvent event )
 {
 //    /*
     if( event.isAltDown() )
@@ -100,8 +100,6 @@ void wellingtonModelApp::mouseDown( MouseEvent event ) //TODO: send mouse input 
 	else
 		mArcball.mouseDown( event.getPos() );
 //     */
-//    mMouseDown = true;
-//    mouseDrag(event);
 }
 
 void wellingtonModelApp::mouseDrag(MouseEvent event)
@@ -114,16 +112,29 @@ void wellingtonModelApp::mouseDrag(MouseEvent event)
 	else
 		mArcball.mouseDrag( event.getPos() );
 //     */
-    
-//    mMouse = event.getPos();
 }
 
+//TODO: bring mouse events in from waterModule to here
+
 /*
-void wellingtonModelApp::mouseUp(MouseEvent event)
-{
-    mMouseDown = false;
-}
-*/
+ void banTheRewindApp::mouseDown(MouseEvent event)
+ {
+ mMouseDown = true;
+ mouseDrag(event);
+ }
+ 
+ void banTheRewindApp::mouseDrag(MouseEvent event)
+ {
+ mMouse = event.getPos();
+ }
+ 
+ void banTheRewindApp::mouseUp(MouseEvent event)
+ {
+ mMouseDown = false;
+ }
+ 
+ */
+
 
 void wellingtonModelApp::frameCurrentObject()
 {
@@ -160,7 +171,6 @@ void wellingtonModelApp::draw()
 //    /*
      if(mWaterModule != NULL){
      gl::pushMatrices();
-     gl::rotate( mArcball.getQuat() );
      mWaterModule->draw();
      gl::popMatrices();
      }
