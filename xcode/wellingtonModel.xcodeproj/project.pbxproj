@@ -20,6 +20,7 @@
 		53E3CDFC0E86099300238D2B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E3CDFB0E86099300238D2B /* Carbon.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		CD035F89174463AA00471F5D /* waterModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD035F87174463AA00471F5D /* waterModule.cpp */; };
+		CD4615EC1749D2AB006D759D /* texture1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD4615EB1749D2AB006D759D /* texture1.jpg */; };
 		CD97C006174470F200DC252D /* gpgpu_frag.glsl in Resources */ = {isa = PBXBuildFile; fileRef = CD97C000174470F200DC252D /* gpgpu_frag.glsl */; };
 		CD97C007174470F200DC252D /* passThru_vert.glsl in Resources */ = {isa = PBXBuildFile; fileRef = CD97C001174470F200DC252D /* passThru_vert.glsl */; };
 		CD97C008174470F200DC252D /* refraction_frag.glsl in Resources */ = {isa = PBXBuildFile; fileRef = CD97C002174470F200DC252D /* refraction_frag.glsl */; };
@@ -49,6 +50,7 @@
 		8D1107320486CEB800E47090 /* wellingtonModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wellingtonModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD035F87174463AA00471F5D /* waterModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = waterModule.cpp; path = ../src/waterModule.cpp; sourceTree = "<group>"; };
 		CD035F88174463AA00471F5D /* waterModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = waterModule.h; path = ../src/waterModule.h; sourceTree = "<group>"; };
+		CD4615EB1749D2AB006D759D /* texture1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = texture1.jpg; path = ../resources/texture1.jpg; sourceTree = "<group>"; };
 		CD97C000174470F200DC252D /* gpgpu_frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gpgpu_frag.glsl; path = ../resources/gpgpu_frag.glsl; sourceTree = "<group>"; };
 		CD97C001174470F200DC252D /* passThru_vert.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = passThru_vert.glsl; path = ../resources/passThru_vert.glsl; sourceTree = "<group>"; };
 		CD97C002174470F200DC252D /* refraction_frag.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = refraction_frag.glsl; path = ../resources/refraction_frag.glsl; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CD4615EB1749D2AB006D759D /* texture1.jpg */,
 				CD97C000174470F200DC252D /* gpgpu_frag.glsl */,
 				CD97C001174470F200DC252D /* passThru_vert.glsl */,
 				CD97C002174470F200DC252D /* refraction_frag.glsl */,
@@ -221,6 +224,7 @@
 				CD97C009174470F200DC252D /* texture.jpg in Resources */,
 				CD97C00A174470F200DC252D /* wellington.jpg in Resources */,
 				CD97C00B174470F200DC252D /* wellington01.obj in Resources */,
+				CD4615EC1749D2AB006D759D /* texture1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

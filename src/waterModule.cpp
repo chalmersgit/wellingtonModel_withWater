@@ -95,16 +95,18 @@ void WaterModule::drawFullScreenRect()
     
     //Define quad vertices
     Area bounds = getWindowBounds();
-    Vec2f vert0((float)bounds.x1, (float)bounds.y1 );
-    Vec2f vert1((float)bounds.x2, (float)bounds.y1 );
-    Vec2f vert2((float)bounds.x1, (float)bounds.y2 );
-    Vec2f vert3((float)bounds.x2, (float)bounds.y2 );
+    Vec3f vert0((float)bounds.x1, (float)bounds.y1, 0.0f );
+    Vec3f vert1((float)bounds.x2, (float)bounds.y1, 0.0f );
+    Vec3f vert2((float)bounds.x1, (float)bounds.y2, 0.0f );
+    Vec3f vert3((float)bounds.x2, (float)bounds.y2, 0.0f );
+    
+
     
     //Define quad texture coords
-    Vec2f uv0(0.0f, 0.0f);
-    Vec2f uv1(1.0f, 0.0f);
-    Vec2f uv2(0.0f, 1.0f);
-    Vec2f uv3(1.0f, 1.0f);
+    Vec3f uv0(0.0f, 0.0f, 0.0f);
+    Vec3f uv1(1.0f, 0.0f, 0.0f);
+    Vec3f uv2(0.0f, 1.0f, 0.0f);
+    Vec3f uv3(1.0f, 1.0f, 0.0f);
     
     //Draw quad (two triangles)
     gl::texCoord(uv0);
@@ -125,8 +127,10 @@ void WaterModule::drawFullScreenRect()
     gl::end();
 }
 
-void WaterModule::draw()
+void WaterModule::draw(float waterHeight)
 {
+    
+    
     
     //GPGPU pass
     
@@ -134,13 +138,17 @@ void WaterModule::draw()
     gl::enable(GL_TEXTURE_2D);
     gl::color(Colorf::white());
     
+    
     //Bind the other FBO to draw onto it
     size_t pong = (mFboIndex+1) % 2;
     mFbo[pong].bindFramebuffer();
     
+    
+    glPushMatrix();
     //set up the window to match the FBO
     gl::setViewport(mFbo[mFboIndex].getBounds());
     gl::setMatricesWindow(mFbo[mFboIndex].getSize(), false);
+    //gl::setMatricesWindowPersp(mFbo[mFboIndex].getSize());
     gl::clear();
     
     
@@ -165,10 +173,10 @@ void WaterModule::draw()
     //Draw mouse input into red channel
     if(mMouseDown){
         gl::color(ColorAf(1.0f, 0.0f, 0.0f, 1.0f));
-        gl::drawSolidCircle(Vec2f(mMouse), 4.0f, 32);
+        gl::drawSolidCircle(Vec2f(mMouse), 10.0f, 32);
         gl::color(Color::white());
     }
-    
+    glPopMatrix();
     //Stop drawing to FBO
     mFbo[pong].unbindFramebuffer();
     
@@ -182,11 +190,12 @@ void WaterModule::draw()
     //clear screen and set to viewport
     gl::clear(Color::black());
     gl::setViewport(getWindowBounds());
-    gl::setMatricesWindow(getWindowSize());
+    //gl::setMatricesWindow(getWindowSize());
+    gl::setMatricesWindowPersp(getWindowSize());
     
     //this flag draws the raw data without refraction
     if(mShowInput){
-        gl::draw(mFbo[mFboIndex].getTexture());
+        //gl::draw(mFbo[mFboIndex].getTexture());
     }else{
         //bind the FBO we last rendered as a texture
         mFbo[mFboIndex].bindTexture(0, 0);
@@ -202,14 +211,24 @@ void WaterModule::draw()
         mShaderRefraction.uniform("tex", 1);
         
         //fill the screen with the shader output
+        //gl::drawCube(Vec3f(0, 0, 0), Vec3f(841.0f, 1.0f, 600.0f));
+
+//        gl::drawSolidRect(getWindowBounds());
+        //gl::rotate(Vec3f(180.0, 0.0, 0.0));
+        gl::translate(0,0,waterHeight);
+        cout << "water height: " << waterHeight << endl;
+//        gl::enableWireframe();
         drawFullScreenRect();
-        
         //unbind and disable the texture
-        mTexture.unbind();
-        gl::disable(GL_TEXTURE_2D);
+        
+        
         
         //end shader output
         mShaderRefraction.unbind();
+        mTexture.unbind();
+        gl::disable(GL_TEXTURE_2D);
+        mFbo[mFboIndex].unbindTexture();
+        
         
     }
     

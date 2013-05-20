@@ -28,6 +28,7 @@ class wellingtonModelApp : public AppBasic {
 	void update();
 	void draw();
     
+    float userIncr;
     
     gl::Texture myImage;
     gl::VboMesh mVbo;
@@ -42,6 +43,10 @@ class wellingtonModelApp : public AppBasic {
     //Mouse
     ci::Vec2i mMouse;
     bool mMouseDown;
+    
+    //show stuff
+    bool drawWater;
+    bool drawMesh;
 };
 
 void wellingtonModelApp::prepareSettings(Settings *settings )
@@ -61,12 +66,18 @@ void wellingtonModelApp::resize(ResizeEvent event)
 
 void wellingtonModelApp::setup()
 {
+    drawWater = true;
+    drawMesh = true;
+    
+    userIncr = 0.0f; 
+    
     //setFullScreen(true);
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     
 //        myImage = gl::Texture(loadImage(loadResource(RES_WELLINGTON_IMG)));
     myImage = gl::Texture(loadImage(loadFile("/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/resources/wellington.jpg")));
+    
     
     
     //    mChannel = Channel32f(loadImage(loadResource("wellington.jpg")));
@@ -79,7 +90,12 @@ void wellingtonModelApp::setup()
     
     CameraPersp initialCam;
     initialCam.setPerspective( 60.0f, getWindowAspectRatio(), 0.1, 50000 ); //TODO: get correct camera persp from C4D
+    
+    initialCam.lookAt(Vec3f(0, 40, 0), Vec3f(0, 0, 0), Vec3f(0, -1, 0));
+    
     mMayaCam.setCurrentCam( initialCam );
+    
+    
     
     
     mWaterModule = new WaterModule();
@@ -127,10 +143,31 @@ void wellingtonModelApp::keyDown(KeyEvent event)
         }
         exit(0);
     }
+    if(event.getChar() == 'p'){
+        userIncr+= 1.0f;
+    }
+    if(event.getChar() == 'o'){
+        userIncr -= 1.0f;
+    }
+    if(event.getChar() == 'w'){
+        drawWater = !drawWater;
+    }
+    if(event.getChar() == 'm'){
+        drawMesh = !drawMesh;
+    }
 }
 
 void wellingtonModelApp::update()
-{}
+{
+    /*
+    CameraPersp initialCam;
+    initialCam.setPerspective( 60.0f, getWindowAspectRatio(), 0.1, 50000 ); //TODO: get correct camera persp from C4D
+    
+    initialCam.lookAt(Vec3f(0, userIncr, 0), Vec3f(0, 0, 0), Vec3f(0, -1, 0));
+    
+    mMayaCam.setCurrentCam( initialCam );
+     */
+}
 
 void wellingtonModelApp::draw()
 {
@@ -141,34 +178,37 @@ void wellingtonModelApp::draw()
     
     // clear out the window with black
 	gl::clear( Color( 0, 0, 0 ) );
-    
-//    /*
-     if(mWaterModule != NULL){
-     gl::pushMatrices();
-     mWaterModule->draw();
-     gl::popMatrices();
-     }
-//     */
-    
-    
-    /*
     gl::setMatrices( mMayaCam.getCamera());
-    
-    gl::pushMatrices();
-    myImage.enableAndBind();
-    gl::rotate( mArcball.getQuat() );
-    gl::scale(Vec3f(0.035,0.035,0.035));
-    glLineWidth(0.3f);
-    gl::enableWireframe();
-    gl::rotate(Vec3f(50.0, -20.0, 0.0));
-    gl::draw(mVbo);
-    myImage.unbind();
-    gl::popMatrices();
-     
-     */
-    
- 
-    
+
+
+    //            /*
+    if(drawWater == true){
+        if(mWaterModule != NULL){
+            gl::pushMatrices();
+            mWaterModule->draw(userIncr);
+            gl::popMatrices();
+        }
+    }
+    //         */
+
+//        /*
+    if(drawMesh == true){
+        gl::pushMatrices();
+//        myImage.enableAndBind();
+//      gl::rotate( mArcball.getQuat() );
+        gl::scale(Vec3f(0.035,0.035,0.035));
+        gl::color(1, 1, 1);
+        glLineWidth(0.03f);
+        gl::enableWireframe();
+        gl::rotate(Vec3f(-10, 0.0, 0.0));
+        gl::draw(mVbo);
+        gl::disableWireframe();
+//        myImage.unbind();
+        gl::popMatrices();
+        }
+//     */
+
+
 }
 
 //CINDER_APP_BASIC( wellingtonModelApp, RendererGl )

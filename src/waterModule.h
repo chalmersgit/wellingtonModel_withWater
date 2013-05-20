@@ -10,7 +10,7 @@
 class WaterModule{
 public:
     WaterModule();
-    void draw();
+    void draw(float);
     void keyDown(ci::app::KeyEvent event);
     void mouseDown(ci::app::MouseEvent event);
     void mouseDrag(ci::app::MouseEvent event);
