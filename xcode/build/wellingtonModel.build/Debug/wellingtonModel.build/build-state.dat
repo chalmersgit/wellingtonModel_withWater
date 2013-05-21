@@ -3,14 +3,17 @@ v5
 r1
 cCheck dependencies
 cProcessInfoPlistFile "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Info.plist" Info.plist
+cCpResource ../resources/wellingtonModelShader.fs ./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.fs
 cCpResource CinderApp.icns ./build/Debug/wellingtonModel.app/Contents/Resources/CinderApp.icns
 cCpResource ../resources/gpgpu_frag.glsl ./build/Debug/wellingtonModel.app/Contents/Resources/gpgpu_frag.glsl
-cCpResource ../resources/passThru_vert.glsl ./build/Debug/wellingtonModel.app/Contents/Resources/passThru_vert.glsl
+cCpResource ../resources/wellingtonModelShader.vs ./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.vs
 cCpResource ../resources/refraction_frag.glsl ./build/Debug/wellingtonModel.app/Contents/Resources/refraction_frag.glsl
+cCpResource ../resources/wellington.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/wellington.jpg
+cCpResource ../resources/passThru_vert.glsl ./build/Debug/wellingtonModel.app/Contents/Resources/passThru_vert.glsl
 cCpResource ../resources/texture.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/texture.jpg
 cCpResource ../resources/wellington01.obj ./build/Debug/wellingtonModel.app/Contents/Resources/wellington01.obj
-cCpResource ../resources/wellington.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/wellington.jpg
-cCpResource ../resources/texture1.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/texture1.jpg
+cCpResource ../resources/texture4.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/texture4.jpg
+cCpResource ../resources/wellington_ALPHA.png ./build/Debug/wellingtonModel.app/Contents/Resources/wellington_ALPHA.png
 cProcessPCH++ /var/folders/94/yg656cpx109_1bvgkr825pym0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/wellingtonModel_Prefix-aoabyxrqxvvnxgccofxglviikguc/wellingtonModel_Prefix.pch.pth wellingtonModel_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
@@ -2638,9 +2641,9 @@ t1336782579
 s24149
 
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../include/Resources.h
-c0000000051999B040000000000000217
-t1369021188
-s535
+c00000000519AFF900000000000000309
+t1369112464
+s777
 
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/gpgpu_frag.glsl
 c00000000518990010000000000000C6A
@@ -2667,6 +2670,16 @@ c0000000051999F43000000000002365F
 t1369022275
 s144991
 
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/texture4.jpg
+c00000000519AF4AA000000000001A718
+t1369109674
+s108312
+
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/texture5.jpg
+c00000000519AF9310000000000016BF8
+t1369110833
+s93176
+
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/wellington.jpg
 c000000005188C78C00000000002C75AA
 t1367918476
@@ -2677,10 +2690,30 @@ c000000005188BDF60000000000379E1C
 t1367916022
 s3644956
 
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/wellington04.obj
+c00000000519AF9E20000000000185D35
+t1369111010
+s1596725
+
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/wellingtonModelShader.fs
+c00000000519AFF210000000000000000
+t1369112353
+s0
+
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/wellingtonModelShader.vs
+c00000000519AFEFB0000000000000000
+t1369112315
+s0
+
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/wellington_ALPHA.png
+c00000000519B3CEB00000000005A4669
+t1369128171
+s5916265
+
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.cpp
-c000000005199A1DA000000000000187D
-t1369022938
-s6269
+c00000000519B005E0000000000001879
+t1369112670
+s6265
 
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.h
 c0000000051999FFB0000000000000398
@@ -2688,12 +2721,12 @@ t1369022459
 s920
 
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp
-c000000005199A4280000000000001499
-t1369023528
-s5273
+c00000000519B446A0000000000001762
+t1369130090
+s5986
 
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app
-t1369023243
+t1369130078
 s102
 
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Info.plist
@@ -2701,8 +2734,8 @@ t1368665915
 s1241
 
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/MacOS/wellingtonModel
-t1369023243
-s7910868
+t1369130078
+s7915096
 
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/PkgInfo
 t1368665915
@@ -2732,6 +2765,14 @@ N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater
 t1369022277
 s144991
 
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/texture4.jpg
+t1369109774
+s108312
+
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/texture5.jpg
+t1369110858
+s93176
+
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/wellington.jpg
 t1368669095
 s2913706
@@ -2740,8 +2781,24 @@ N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater
 t1368669095
 s3644956
 
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/wellington04.obj
+t1369111067
+s1596725
+
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.fs
+t1369112601
+s0
+
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.vs
+t1369112601
+s0
+
+N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/wellington_ALPHA.png
+t1369128175
+s5916265
+
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o
-t1369022954
+t1369112796
 s483164
 
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModel.LinkFileList
@@ -2750,8 +2807,8 @@ t1368671916
 s363
 
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.o
-t1369023243
-s660488
+t1369130078
+s671372
 
 N/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/x86_64/waterModule.o
 t1369011577
@@ -5498,14 +5555,14 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesec1275abdb49b741^fc5075abdb49b741^---0#1#0#--18"Check dependencies36"DDA468B6-77D8-4823-9942-B706E0E942E4-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies65726eea7b4bb741^a3cc6eea7b4bb741^---0#1#0#--18"Check dependencies36"DD9BBACB-C24B-475F-98F0-0519D3044A24-
 
 CCompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/banTheRewindApp.o "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/../src/banTheRewindApp.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 r0
 
 CCompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s390715752.342453
-e390715754.146197
+s390805594.426541
+e390805596.875626
 r1
 xCompileC
 x./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o
@@ -5514,7 +5571,7 @@ xnormal
 xi386
 xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Compile /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.cpp48fb5768d949b741^a96b256ad949b741^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.cpp0000000000000000^3531"CompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o ../src/waterModule.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-generated-files.hmap" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-own-target-headers.hmap" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-all-target-headers.hmap" -iquote "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-project-headers.hmap" -iquote../../../../cinder_0.8.4_mac/include -iquote../include "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug/include" -I../../../../cinder_0.8.4_mac/boost "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources/i386" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources" "-F/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug" -include /var/folders/94/yg656cpx109_1bvgkr825pym0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/wellingtonModel_Prefix-aoabyxrqxvvnxgccofxglviikguc/wellingtonModel_Prefix.pch -MMD -MT dependencies -MF "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.d" --serialize-diagnostics "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.dia" -c "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.cpp" -o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o"36"3C2014E1-B1C6-4605-9837-49F9A5D21DF2-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Compile /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.cpp5a816d5a384bb741^8028e05c384bb741^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.cpp0000000000000000^3531"CompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o ../src/waterModule.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-generated-files.hmap" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-own-target-headers.hmap" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-all-target-headers.hmap" -iquote "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-project-headers.hmap" -iquote../../../../cinder_0.8.4_mac/include -iquote../include "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug/include" -I../../../../cinder_0.8.4_mac/boost "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources/i386" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources" "-F/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug" -include /var/folders/94/yg656cpx109_1bvgkr825pym0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/wellingtonModel_Prefix-aoabyxrqxvvnxgccofxglviikguc/wellingtonModel_Prefix.pch -MMD -MT dependencies -MF "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.d" --serialize-diagnostics "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.dia" -c "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.cpp" -o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o"36"0270745A-8B8A-4A6D-868D-D5D8B9DDB0D1-
 
 CCompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/../src/waterModule.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s390363724.801398
@@ -5530,8 +5587,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Compile /Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/../src/waterModule.cpp0d39ce4c7a44b741^d04371507a44b741^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/oliverellmers/Desktop/Daly%20Projects/Project/wellingtonModel_withWater/xcode/../src/waterModule.cpp0000000000000000^3492"CompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o ../src/waterModule.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-generated-files.hmap" "-I/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-own-target-headers.hmap" "-I/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-all-target-headers.hmap" -iquote "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-project-headers.hmap" -iquote../../../../cinder_0.8.4_mac/include -iquote../include "-I/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/build/Debug/include" -I../../../../cinder_0.8.4_mac/boost "-I/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources/i386" "-I/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources" "-F/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/build/Debug" -include /var/folders/94/yg656cpx109_1bvgkr825pym0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/wellingtonModel_Prefix-cxupjuhekewcndcqtphgioewucrh/wellingtonModel_Prefix.pch -MMD -MT dependencies -MF "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.d" --serialize-diagnostics "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.dia" -c "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/../src/waterModule.cpp" -o "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o"36"E639804D-73CB-47BA-97AB-A9CFCB79DAD8-
 
 CCompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s390716331.523845
-e390716333.748178
+s390822890.482298
+e390822893.192646
 r1
 xCompileC
 x./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.o
@@ -5545,7 +5602,7 @@ o../../../../cinder_0.8.4_mac/include/cinder/MayaCamUI.h:84:10: warning: unused 
 o                        Vec3f mV = mW.cross( mU ).normalized();
 o                              ^
 o1 warning generated.
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compile /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cppd74c86abdb49b741^f985bfaddb49b741^-371"In file included from /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp:8:../../../../cinder_0.8.4_mac/include/cinder/MayaCamUI.h:84:10: warning: unused variable 'mV' [-Wunused-variable]                        Vec3f mV = mW.cross( mU ).normalized();                              ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@20"Unused variable 'mV'-390716333#18446744073709551615#0#1(2@140"In file included from /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp:8:-390716333#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@124"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/src/wellingtonModelApp.cpp0000000000000000^7#9#7#9#212#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@88"file://localhost/Users/oliverellmers/Desktop/cinder_0.8.4_mac/include/cinder/MayaCamUI.h0000000000000000^83#9#83#9#3461#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@133"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp0000000000000000^3573"CompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.o ../src/wellingtonModelApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-generated-files.hmap" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-own-target-headers.hmap" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-all-target-headers.hmap" -iquote "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-project-headers.hmap" -iquote../../../../cinder_0.8.4_mac/include -iquote../include "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug/include" -I../../../../cinder_0.8.4_mac/boost "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources/i386" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources" "-F/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug" -include /var/folders/94/yg656cpx109_1bvgkr825pym0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/wellingtonModel_Prefix-aoabyxrqxvvnxgccofxglviikguc/wellingtonModel_Prefix.pch -MMD -MT dependencies -MF "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.d" --serialize-diagnostics "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.dia" -c "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp" -o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.o"36"036F253A-E25E-44F3-B938-19E2C8327F34-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection123"Compile /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp90a17bea7b4bb741^3c4e31ed7b4bb741^-371"In file included from /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp:8:../../../../cinder_0.8.4_mac/include/cinder/MayaCamUI.h:84:10: warning: unused variable 'mV' [-Wunused-variable]                        Vec3f mV = mW.cross( mU ).normalized();                              ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@20"Unused variable 'mV'-390822893#18446744073709551615#0#1(2@140"In file included from /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp:8:-390822893#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@124"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/src/wellingtonModelApp.cpp0000000000000000^7#9#7#9#212#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@88"file://localhost/Users/oliverellmers/Desktop/cinder_0.8.4_mac/include/cinder/MayaCamUI.h0000000000000000^83#9#83#9#3461#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@133"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp0000000000000000^3573"CompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.o ../src/wellingtonModelApp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-generated-files.hmap" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-own-target-headers.hmap" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-all-target-headers.hmap" -iquote "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-project-headers.hmap" -iquote../../../../cinder_0.8.4_mac/include -iquote../include "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug/include" -I../../../../cinder_0.8.4_mac/boost "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources/i386" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources" "-F/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug" -include /var/folders/94/yg656cpx109_1bvgkr825pym0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/wellingtonModel_Prefix-aoabyxrqxvvnxgccofxglviikguc/wellingtonModel_Prefix.pch -MMD -MT dependencies -MF "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.d" --serialize-diagnostics "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.dia" -c "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp" -o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.o"36"ED60726B-4B7C-49D3-9CF1-0AEC24AF379A-
 
 CCompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.o "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s390363724.798914
@@ -5641,6 +5698,24 @@ x../resources/texture1.jpg
 x./build/Debug/wellingtonModel.app/Contents/Resources/texture1.jpg
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy ./build/Debug/wellingtonModel.app/Contents/Resources/texture1.jpgaea0b1c5d649b741^f3aeb2c5d649b741^---0#0#0#-19%DVTDocumentLocation2@169"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/texture1.jpg0000000000000000^565"CpResource ../resources/texture1.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/texture1.jpg    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/texture1.jpg" "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources"36"F91780F6-A4EC-46C1-99D0-1517C7C9FE8B-
 
+CCpResource ../resources/texture4.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/texture4.jpg
+s390802574.573928
+e390802574.576428
+r1
+xCpResource
+x../resources/texture4.jpg
+x./build/Debug/wellingtonModel.app/Contents/Resources/texture4.jpg
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy ./build/Debug/wellingtonModel.app/Contents/Resources/texture4.jpg61fa928e2c4bb741^e6b0938e2c4bb741^---0#0#0#-19%DVTDocumentLocation2@169"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/texture4.jpg000000000080d041^565"CpResource ../resources/texture4.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/texture4.jpg    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/texture4.jpg" "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources"36"808E0C96-C39A-416C-B2A5-D02089520227-
+
+CCpResource ../resources/texture5.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/texture5.jpg
+s390803658.152980
+e390803658.155115
+r1
+xCpResource
+x../resources/texture5.jpg
+x./build/Debug/wellingtonModel.app/Contents/Resources/texture5.jpg
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy ./build/Debug/wellingtonModel.app/Contents/Resources/texture5.jpga33c27ca304bb741^19e327ca304bb741^---0#0#0#-19%DVTDocumentLocation2@169"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/texture5.jpg000000000080d041^565"CpResource ../resources/texture5.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/texture5.jpg    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/texture5.jpg" "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources"36"ABB9F4D3-1309-4CC2-A4A7-EC670184D2F2-
+
 CCpResource ../resources/wellington.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/wellington.jpg
 s390361895.049651
 e390361895.279759
@@ -5659,6 +5734,42 @@ x../resources/wellington01.obj
 x./build/Debug/wellingtonModel.app/Contents/Resources/wellington01.obj
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy ./build/Debug/wellingtonModel.app/Contents/Resources/wellington01.obj20d50c277344b741^207e62277344b741^---0#0#0#-19%DVTDocumentLocation2@170"file://localhost/Users/oliverellmers/Desktop/Daly%20Projects/Project/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/wellington01.obj000000000080d041^568"CpResource ../resources/wellington01.obj ./build/Debug/wellingtonModel.app/Contents/Resources/wellington01.obj    cd "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/../resources/wellington01.obj" "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources"36"CE5AC478-6BE6-4B96-91E6-112E5D06AFB5-
 
+CCpResource ../resources/wellington04.obj ./build/Debug/wellingtonModel.app/Contents/Resources/wellington04.obj
+s390803867.066564
+e390803867.078458
+r1
+xCpResource
+x../resources/wellington04.obj
+x./build/Debug/wellingtonModel.app/Contents/Resources/wellington04.obj
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Copy ./build/Debug/wellingtonModel.app/Contents/Resources/wellington04.obj4222119b314bb741^4816149b314bb741^---0#0#0#-19%DVTDocumentLocation2@173"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/wellington04.obj000000000080d041^577"CpResource ../resources/wellington04.obj ./build/Debug/wellingtonModel.app/Contents/Resources/wellington04.obj    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/wellington04.obj" "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources"36"C1735F02-664E-497C-B4B2-093A58B40AD1-
+
+CCpResource ../resources/wellingtonModelShader.fs ./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.fs
+s390805401.177524
+e390805401.183333
+r1
+xCpResource
+x../resources/wellingtonModelShader.fs
+x./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.fs
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Copy ./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.fsadc32d99374bb741^a5dd3499374bb741^---0#0#0#-19%DVTDocumentLocation2@181"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.fs000000000080d041^601"CpResource ../resources/wellingtonModelShader.fs ./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.fs    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/wellingtonModelShader.fs" "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources"36"C13917BC-5F4A-42D5-A437-9467767B1EBD-
+
+CCpResource ../resources/wellingtonModelShader.vs ./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.vs
+s390805401.177524
+e390805401.182388
+r1
+xCpResource
+x../resources/wellingtonModelShader.vs
+x./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.vs
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Copy ./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.vs3cbe2d99374bb741^62d93499374bb741^---0#0#0#-19%DVTDocumentLocation2@181"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.vs000000000080d041^601"CpResource ../resources/wellingtonModelShader.vs ./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.vs    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/wellingtonModelShader.vs" "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources"36"601906A0-071F-4CDB-A3A2-4BF9F9283990-
+
+CCpResource ../resources/wellington_ALPHA.png ./build/Debug/wellingtonModel.app/Contents/Resources/wellington_ALPHA.png
+s390820975.695290
+e390820975.705885
+r1
+xCpResource
+x../resources/wellington_ALPHA.png
+x./build/Debug/wellingtonModel.app/Contents/Resources/wellington_ALPHA.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Copy ./build/Debug/wellingtonModel.app/Contents/Resources/wellington_ALPHA.pngb725b26f744bb741^3db7b46f744bb741^---0#0#0#-19%DVTDocumentLocation2@177"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/wellington_ALPHA.png0000000000000000^589"CpResource ../resources/wellington_ALPHA.png ./build/Debug/wellingtonModel.app/Contents/Resources/wellington_ALPHA.png    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../resources/wellington_ALPHA.png" "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources"36"7F76ED8C-F9D9-4365-B7E0-BB0060FFE786-
+
 CCpResource CinderApp.icns ./build/Debug/wellingtonModel.app/Contents/Resources/CinderApp.icns
 s390358715.318037
 e390358715.320690
@@ -5669,14 +5780,14 @@ x./build/Debug/wellingtonModel.app/Contents/Resources/CinderApp.icns
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection72"Copy ./build/Debug/wellingtonModel.app/Contents/Resources/CinderApp.icns2d7851bb6644b741^8b1852bb6644b741^---0#0#0#-19%DVTDocumentLocation2@168"file://localhost/Users/oliverellmers/Desktop/Daly%20Projects/Project/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources/CinderApp.icns000000000080d041^536"CpResource CinderApp.icns ./build/Debug/wellingtonModel.app/Contents/Resources/CinderApp.icns    cd "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/CinderApp.icns" "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Resources"36"B389268C-EC8F-4FAD-8324-C7178788EC93-
 
 CLd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/MacOS/wellingtonModel" normal i386
-s390716333.755006
-e390716334.108573
+s390822893.199537
+e390822893.533766
 r1
 xLd
 x/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/MacOS/wellingtonModel
 xnormal
 xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection155"Link /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/MacOS/wellingtonModel166ec1addb49b741^5ccc1baedb49b741^---0#0#0#--1280"Ld ./build/Debug/wellingtonModel.app/Contents/MacOS/wellingtonModel normal i386    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk "-L/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug" "-F/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug" -filelist "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModel.LinkFileList" -mmacosx-version-min=10.5 ../../../../cinder_0.8.4_mac/lib/libcinder_d.a -lcurl -framework Cocoa -framework OpenGL -framework Carbon -framework CoreVideo -framework QTKit -framework QuickTime -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/MacOS/wellingtonModel"36"D77278B1-FA3F-40C2-AA3A-E4A14FF51100-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection155"Link /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/MacOS/wellingtonModel2f3033ed7b4bb741^4ca488ed7b4bb741^---0#0#0#--1280"Ld ./build/Debug/wellingtonModel.app/Contents/MacOS/wellingtonModel normal i386    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk "-L/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug" "-F/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug" -filelist "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModel.LinkFileList" -mmacosx-version-min=10.5 ../../../../cinder_0.8.4_mac/lib/libcinder_d.a -lcurl -framework Cocoa -framework OpenGL -framework Carbon -framework CoreVideo -framework QTKit -framework QuickTime -framework Accelerate -framework AudioToolbox -framework AudioUnit -framework CoreAudio -o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/MacOS/wellingtonModel"36"4F269C29-63E2-42E1-93CA-4D9737A48D90-
 
 CLd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/MacOS/wellingtonModel" normal x86_64
 s390704394.829408
@@ -5962,12 +6073,12 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Precompile wellingtonModel_Prefix.pcha1bbe4f6ac49b741^b307f6f6ac49b741^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/oliverellmers/Desktop/Cinder%20Projects/Projects/wellingtonModel_withWater/xcode/wellingtonModel_Prefix.pch0000000000000000^3446"ProcessPCH++ /var/folders/94/yg656cpx109_1bvgkr825pym0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/wellingtonModel_Prefix-eqnclzwnkpvalygeeltlqqrbxcwl/wellingtonModel_Prefix.pch.pth wellingtonModel_Prefix.pch normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.5 -g -Wno-sign-conversion -iquote "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-generated-files.hmap" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-own-target-headers.hmap" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-all-target-headers.hmap" -iquote "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/wellingtonModel-project-headers.hmap" -iquote../../../../cinder_0.8.4_mac/include -iquote../include "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug/include" -I../../../../cinder_0.8.4_mac/boost "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources/x86_64" "-I/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/wellingtonModel.build/Debug/wellingtonModel.build/DerivedSources" "-F/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/build/Debug" --serialize-diagnostics /var/folders/94/yg656cpx109_1bvgkr825pym0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/wellingtonModel_Prefix-eqnclzwnkpvalygeeltlqqrbxcwl/wellingtonModel_Prefix.pch.dia -c "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/wellingtonModel_Prefix.pch" -o /var/folders/94/yg656cpx109_1bvgkr825pym0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/wellingtonModel_Prefix-eqnclzwnkpvalygeeltlqqrbxcwl/wellingtonModel_Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/94/yg656cpx109_1bvgkr825pym0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/wellingtonModel_Prefix-eqnclzwnkpvalygeeltlqqrbxcwl/wellingtonModel_Prefix.pch.d36"06EF46FE-B043-4587-B507-281BA0C586AA-
 
 CTouch "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app"
-s390716334.116830
-e390716334.122068
+s390822893.541566
+e390822893.547449
 r1
 xTouch
 x/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Touch /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app12f61daedb49b741^853f1faedb49b741^---0#0#0#--279"Touch ./build/Debug/wellingtonModel.app    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    /usr/bin/touch -c "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app"36"13BB73A1-8A6C-4772-8DE2-8E611A0A712F-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Touch /Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.appa3b18aed7b4bb741^5b258ced7b4bb741^---0#0#0#--279"Touch ./build/Debug/wellingtonModel.app    cd "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode"    /usr/bin/touch -c "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app"36"D85ED805-6039-4D27-A925-61B5C227A405-
 
 CTouch "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app"
 s390363729.074377

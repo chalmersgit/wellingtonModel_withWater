@@ -10,6 +10,7 @@
 #include "Resources.h"
 #include "cinder/Sphere.h"
 #include "waterModule.h"
+#include "cinder/gl/GlslProg.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -47,6 +48,9 @@ class wellingtonModelApp : public AppBasic {
     //show stuff
     bool drawWater;
     bool drawMesh;
+    
+    //shader
+    gl::GlslProg wellingtonShader;
 };
 
 void wellingtonModelApp::prepareSettings(Settings *settings )
@@ -66,6 +70,16 @@ void wellingtonModelApp::resize(ResizeEvent event)
 
 void wellingtonModelApp::setup()
 {
+    
+    //Load shader
+    try{
+        wellingtonShader = gl::GlslProg(loadResource(RES_MODEL_VERT ), loadResource(RES_MODEL_FRAG ));
+    }catch(gl::GlslProgCompileExc ex){
+        console() << "Unable to compile model shader:\n" << ex.what() << "\n";
+        return;
+    }
+    
+    
     drawWater = true;
     drawMesh = true;
     
@@ -76,7 +90,7 @@ void wellingtonModelApp::setup()
     glEnable(GL_LIGHT0);
     
 //        myImage = gl::Texture(loadImage(loadResource(RES_WELLINGTON_IMG)));
-    myImage = gl::Texture(loadImage(loadFile("/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/resources/wellington.jpg")));
+    myImage = gl::Texture(loadImage(loadFile("/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/resources/wellington_ALPHA.png")));
     
     
     
@@ -89,9 +103,14 @@ void wellingtonModelApp::setup()
     mVbo = gl::VboMesh(mMesh);
     
     CameraPersp initialCam;
-    initialCam.setPerspective( 60.0f, getWindowAspectRatio(), 0.1, 50000 ); //TODO: get correct camera persp from C4D
+    initialCam.setPerspective( 75.0f, getWindowAspectRatio(), 5.0f, 3000.0f ); //TODO: get correct camera persp from C4D
     
-    initialCam.lookAt(Vec3f(0, 40, 0), Vec3f(0, 0, 0), Vec3f(0, -1, 0));
+    Vec3f mEye = Vec3f(0.0f, 30.0f, 0.0f);
+    Vec3f mCenter = Vec3f::zero();
+    Vec3f mUp = Vec3f::yAxis();
+    
+    initialCam.lookAt( mEye, mCenter, mUp ); //NOTE: new camera
+//    initialCam.lookAt(Vec3f(0, 43, 0), Vec3f(0, 0, 0), Vec3f(0, -1, 0)); //NOTE: orginal camera
     
     mMayaCam.setCurrentCam( initialCam );
     
@@ -194,16 +213,18 @@ void wellingtonModelApp::draw()
 //        /*
     if(drawMesh == true){
         gl::pushMatrices();
-//        myImage.enableAndBind();
-//      gl::rotate( mArcball.getQuat() );
+//        wellingtonShader.bind();
+        myImage.enableAndBind();
+//      gl::rotate( mArcball.getQuat() ); //NOTE: for debugging
         gl::scale(Vec3f(0.035,0.035,0.035));
-        gl::color(1, 1, 1);
-        glLineWidth(0.03f);
+        glLineWidth(0.2f);
         gl::enableWireframe();
-        gl::rotate(Vec3f(-10, 0.0, 0.0));
+        gl::translate(Vec3f(320.0, 0.0, -150.0));
+        gl::rotate(Vec3f(-10.0, -10.0, 0.0));
         gl::draw(mVbo);
         gl::disableWireframe();
-//        myImage.unbind();
+        myImage.unbind();
+//        wellingtonShader.unbind();
         gl::popMatrices();
         }
 //     */

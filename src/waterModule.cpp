@@ -59,7 +59,7 @@ void WaterModule::setup()
         console() << "Unable to compile refraction shader:\n" << ex.what() << "\n";
         return;
     }
-    
+
     //Load refraction texture
     {
         gl::Texture::Format format;
