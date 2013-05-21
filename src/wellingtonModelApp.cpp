@@ -103,7 +103,7 @@ void wellingtonModelApp::setup()
     mVbo = gl::VboMesh(mMesh);
     
     CameraPersp initialCam;
-    initialCam.setPerspective( 75.0f, getWindowAspectRatio(), 5.0f, 3000.0f ); //TODO: get correct camera persp from C4D
+    initialCam.setPerspective( 77.5f, getWindowAspectRatio(), 5.0f, 3000.0f ); //TODO: get correct camera persp from C4D
     
     Vec3f mEye = Vec3f(0.0f, 30.0f, 0.0f);
     Vec3f mCenter = Vec3f::zero();
@@ -178,14 +178,7 @@ void wellingtonModelApp::keyDown(KeyEvent event)
 
 void wellingtonModelApp::update()
 {
-    /*
-    CameraPersp initialCam;
-    initialCam.setPerspective( 60.0f, getWindowAspectRatio(), 0.1, 50000 ); //TODO: get correct camera persp from C4D
     
-    initialCam.lookAt(Vec3f(0, userIncr, 0), Vec3f(0, 0, 0), Vec3f(0, -1, 0));
-    
-    mMayaCam.setCurrentCam( initialCam );
-     */
 }
 
 void wellingtonModelApp::draw()
@@ -219,7 +212,7 @@ void wellingtonModelApp::draw()
         gl::scale(Vec3f(0.035,0.035,0.035));
         glLineWidth(0.2f);
         gl::enableWireframe();
-        gl::translate(Vec3f(320.0, 0.0, -150.0));
+        gl::translate(Vec3f(280.0, 0.0, -180.0));
         gl::rotate(Vec3f(-10.0, -10.0, 0.0));
         gl::draw(mVbo);
         gl::disableWireframe();

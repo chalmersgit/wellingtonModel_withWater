@@ -190,7 +190,7 @@ void WaterModule::draw(float waterHeight)
     //clear screen and set to viewport
     gl::clear(Color::black());
     gl::setViewport(getWindowBounds());
-    //gl::setMatricesWindow(getWindowSize());
+    //gl::setMatricesWindow(getWindowSize());  //NOTE: remeber this big dog error thrower
     gl::setMatricesWindowPersp(getWindowSize());
     
     //this flag draws the raw data without refraction
@@ -211,18 +211,15 @@ void WaterModule::draw(float waterHeight)
         mShaderRefraction.uniform("tex", 1);
         
         //fill the screen with the shader output
-        //gl::drawCube(Vec3f(0, 0, 0), Vec3f(841.0f, 1.0f, 600.0f));
-
+        
+//        gl::drawCube(Vec3f(0, 0, 0), Vec3f(841.0f, 1.0f, 600.0f));
 //        gl::drawSolidRect(getWindowBounds());
-        //gl::rotate(Vec3f(180.0, 0.0, 0.0));
-        gl::translate(0,0,waterHeight);
-        cout << "water height: " << waterHeight << endl;
+//        gl::rotate(Vec3f(180.0, 0.0, 0.0));
 //        gl::enableWireframe();
         drawFullScreenRect();
+        
+        
         //unbind and disable the texture
-        
-        
-        
         //end shader output
         mShaderRefraction.unbind();
         mTexture.unbind();
