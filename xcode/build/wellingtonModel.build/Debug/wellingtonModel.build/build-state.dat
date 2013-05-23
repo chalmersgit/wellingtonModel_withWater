@@ -4,16 +4,16 @@ r1
 cCheck dependencies
 cProcessInfoPlistFile "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/./build/Debug/wellingtonModel.app/Contents/Info.plist" Info.plist
 cCpResource ../resources/wellingtonModelShader.vs ./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.vs
-cCpResource CinderApp.icns ./build/Debug/wellingtonModel.app/Contents/Resources/CinderApp.icns
 cCpResource ../resources/wellingtonModelShader.fs ./build/Debug/wellingtonModel.app/Contents/Resources/wellingtonModelShader.fs
+cCpResource CinderApp.icns ./build/Debug/wellingtonModel.app/Contents/Resources/CinderApp.icns
 cCpResource ../resources/gpgpu_frag.glsl ./build/Debug/wellingtonModel.app/Contents/Resources/gpgpu_frag.glsl
 cCpResource ../resources/passThru_vert.glsl ./build/Debug/wellingtonModel.app/Contents/Resources/passThru_vert.glsl
 cCpResource ../resources/refraction_frag.glsl ./build/Debug/wellingtonModel.app/Contents/Resources/refraction_frag.glsl
 cCpResource ../resources/texture.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/texture.jpg
 cCpResource ../resources/wellington.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/wellington.jpg
-cCpResource ../resources/texture4.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/texture4.jpg
 cCpResource ../resources/wellington_ALPHA.png ./build/Debug/wellingtonModel.app/Contents/Resources/wellington_ALPHA.png
 cCpResource ../resources/wellington01.obj ./build/Debug/wellingtonModel.app/Contents/Resources/wellington01.obj
+cCpResource ../resources/texture4.jpg ./build/Debug/wellingtonModel.app/Contents/Resources/texture4.jpg
 cProcessPCH++ /var/folders/94/yg656cpx109_1bvgkr825pym0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/wellingtonModel_Prefix-aoabyxrqxvvnxgccofxglviikguc/wellingtonModel_Prefix.pch.pth wellingtonModel_Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/waterModule.o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/wellingtonModelApp.o "/Users/oliverellmers/Desktop/Cinder Projects/Projects/wellingtonModel_withWater/xcode/../src/wellingtonModelApp.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
@@ -5555,7 +5555,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies0a4b74198f4cb741^07b474198f4cb741^---0#1#0#--18"Check dependencies36"CE8155EC-FF3D-4817-9B7E-1CC68CEF596A-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies60c7139b2d4eb741^a704149b2d4eb741^---0#1#0#--18"Check dependencies36"73BEC0E1-3E8C-45B4-9B4D-96991BD74414-
 
 CCompileC ./build/wellingtonModel.build/Debug/wellingtonModel.build/Objects-normal/i386/banTheRewindApp.o "/Users/oliverellmers/Desktop/Daly Projects/Project/wellingtonModel_withWater/xcode/../src/banTheRewindApp.cpp" normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
 r0
