@@ -513,4 +513,7 @@ dependencies: \
   ../../../../cinder_0.8.4_mac/include/cinder/CinderResources.h \
   /Users/oliverellmers/Desktop/Cinder\ Projects/Projects/wellingtonModel_withWater/xcode/../src/waterModule.h \
   ../../../../cinder_0.8.4_mac/include/cinder/gl/Fbo.h \
-  ../../../../cinder_0.8.4_mac/include/cinder/gl/GlslProg.h
+  ../../../../cinder_0.8.4_mac/include/cinder/gl/GlslProg.h \
+  /Users/oliverellmers/Desktop/Cinder\ Projects/Projects/wellingtonModel_withWater/xcode/../include/VectorFlowFieldApp.h \
+  ../include/ParticleController.h ../include/Particle.h \
+  ../include/CloudController.h

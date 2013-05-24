@@ -30,6 +30,10 @@
 		CD97C009174470F200DC252D /* texture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD97C003174470F200DC252D /* texture.jpg */; };
 		CD97C00A174470F200DC252D /* wellington.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD97C004174470F200DC252D /* wellington.jpg */; };
 		CD97C00B174470F200DC252D /* wellington01.obj in Resources */ = {isa = PBXBuildFile; fileRef = CD97C005174470F200DC252D /* wellington01.obj */; };
+		CDD63F9517502DA800703FC7 /* CloudController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDD63F9117502DA800703FC7 /* CloudController.cpp */; };
+		CDD63F9617502DA800703FC7 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDD63F9217502DA800703FC7 /* Particle.cpp */; };
+		CDD63F9717502DA800703FC7 /* ParticleController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDD63F9317502DA800703FC7 /* ParticleController.cpp */; };
+		CDD63F9817502DA800703FC7 /* VectorFlowFieldApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDD63F9417502DA800703FC7 /* VectorFlowFieldApp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +67,14 @@
 		CD97C003174470F200DC252D /* texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = texture.jpg; path = ../resources/texture.jpg; sourceTree = "<group>"; };
 		CD97C004174470F200DC252D /* wellington.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wellington.jpg; path = ../resources/wellington.jpg; sourceTree = "<group>"; };
 		CD97C005174470F200DC252D /* wellington01.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = wellington01.obj; path = ../resources/wellington01.obj; sourceTree = "<group>"; };
+		CDD63F9117502DA800703FC7 /* CloudController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CloudController.cpp; path = ../src/CloudController.cpp; sourceTree = "<group>"; };
+		CDD63F9217502DA800703FC7 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = ../src/Particle.cpp; sourceTree = "<group>"; };
+		CDD63F9317502DA800703FC7 /* ParticleController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ParticleController.cpp; path = ../src/ParticleController.cpp; sourceTree = "<group>"; };
+		CDD63F9417502DA800703FC7 /* VectorFlowFieldApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VectorFlowFieldApp.cpp; path = ../src/VectorFlowFieldApp.cpp; sourceTree = "<group>"; };
+		CDD63F9917502DB500703FC7 /* CloudController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CloudController.h; path = ../include/CloudController.h; sourceTree = "<group>"; };
+		CDD63F9A17502DB500703FC7 /* Particle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = ../include/Particle.h; sourceTree = "<group>"; };
+		CDD63F9B17502DB500703FC7 /* ParticleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParticleController.h; path = ../include/ParticleController.h; sourceTree = "<group>"; };
+		CDD63F9D17502E5700703FC7 /* VectorFlowFieldApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VectorFlowFieldApp.h; path = ../include/VectorFlowFieldApp.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +103,10 @@
 			children = (
 				00BAE6590E7ED9C10018A608 /* wellingtonModelApp.cpp */,
 				CD035F87174463AA00471F5D /* waterModule.cpp */,
+				CDD63F9417502DA800703FC7 /* VectorFlowFieldApp.cpp */,
+				CDD63F9117502DA800703FC7 /* CloudController.cpp */,
+				CDD63F9317502DA800703FC7 /* ParticleController.cpp */,
+				CDD63F9217502DA800703FC7 /* Particle.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -145,8 +161,12 @@
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				CD035F88174463AA00471F5D /* waterModule.h */,
 				32CA4F630368D1EE00C91783 /* wellingtonModel_Prefix.pch */,
+				CD035F88174463AA00471F5D /* waterModule.h */,
+				CDD63F9D17502E5700703FC7 /* VectorFlowFieldApp.h */,
+				CDD63F9917502DB500703FC7 /* CloudController.h */,
+				CDD63F9B17502DB500703FC7 /* ParticleController.h */,
+				CDD63F9A17502DB500703FC7 /* Particle.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -249,6 +269,10 @@
 			files = (
 				00BAE65A0E7ED9C10018A608 /* wellingtonModelApp.cpp in Sources */,
 				CD035F89174463AA00471F5D /* waterModule.cpp in Sources */,
+				CDD63F9517502DA800703FC7 /* CloudController.cpp in Sources */,
+				CDD63F9617502DA800703FC7 /* Particle.cpp in Sources */,
+				CDD63F9717502DA800703FC7 /* ParticleController.cpp in Sources */,
+				CDD63F9817502DA800703FC7 /* VectorFlowFieldApp.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

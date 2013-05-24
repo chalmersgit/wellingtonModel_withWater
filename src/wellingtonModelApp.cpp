@@ -11,6 +11,7 @@
 #include "cinder/Sphere.h"
 #include "waterModule.h"
 #include "cinder/gl/GlslProg.h"
+#include "VectorFlowFieldApp.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -40,6 +41,7 @@ class wellingtonModelApp : public AppBasic {
     MayaCamUI mMayaCam;
     
     WaterModule *mWaterModule;
+    VectorFlowFieldApp *mFlowField;
     
     //Mouse
     ci::Vec2i mMouse;
@@ -119,6 +121,9 @@ void wellingtonModelApp::setup()
     
     mWaterModule = new WaterModule();
     mWaterModule->setup();
+    
+    mFlowField = new VectorFlowFieldApp();
+    mFlowField->setup();
 }
 
 void wellingtonModelApp::mouseDown( MouseEvent event )
@@ -178,6 +183,7 @@ void wellingtonModelApp::keyDown(KeyEvent event)
 
 void wellingtonModelApp::update()
 {
+    mFlowField->update();
     
 }
 
@@ -220,8 +226,11 @@ void wellingtonModelApp::draw()
 //        wellingtonShader.unbind();
         gl::popMatrices();
         }
-//     */
-
+//    */
+    
+    gl::pushMatrices();
+    mFlowField->draw();
+    gl::popMatrices();
 
 }
 
