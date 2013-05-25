@@ -31,6 +31,7 @@ CloudController::CloudController(Vec2f loc, float ms, float mf, ParticleControll
 	mAcc = Vec2f(1.0f, 0.0f);
 	mVel = Vec2f(0.0f, 0.0f);
     mRadius = 10.0f;
+    
 }
 
 void CloudController::update(){
@@ -41,7 +42,7 @@ void CloudController::update(){
 	mLoc += mVel;
 
 	//?
-	//mAcc *= 0.0f;
+	mAcc *= 0.001f;
 	
 }
 
@@ -57,7 +58,6 @@ void CloudController::draw(){
 
 /*
 void CloudController::follow(){
-	
 
 }
 */

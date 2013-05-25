@@ -497,4 +497,5 @@ dependencies: \
   ../../../../cinder_0.8.4_mac/include/cinder/ImageIo.h \
   ../../../../cinder_0.8.4_mac/include/cinder/DataTarget.h \
   ../include/Resources.h \
-  ../../../../cinder_0.8.4_mac/include/cinder/CinderResources.h
+  ../../../../cinder_0.8.4_mac/include/cinder/CinderResources.h \
+  /Users/oliverellmers/Desktop/Cinder\ Projects/Projects/wellingtonModel_withWater/xcode/../include/Particle.h

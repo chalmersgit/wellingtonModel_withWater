@@ -4,6 +4,8 @@
 #include "cinder/ImageIo.h"
 #include "Resources.h"
 
+#include "Particle.h"
+
 using namespace ci;
 using namespace ci::app;
 using namespace std;
@@ -173,7 +175,9 @@ void WaterModule::draw(float waterHeight)
     //Draw mouse input into red channel
     if(mMouseDown){
         gl::color(ColorAf(1.0f, 0.0f, 0.0f, 1.0f));
-        gl::drawSolidCircle(Vec2f(mMouse), 10.0f, 32);
+        
+        
+        gl::drawSolidCircle(Vec2f(mMouse), 10.0f, 32);      //TODO: this is where we have to implement the vector flow field
         gl::color(Color::white());
     }
     glPopMatrix();

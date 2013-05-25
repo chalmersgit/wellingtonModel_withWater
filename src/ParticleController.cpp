@@ -133,7 +133,8 @@ Vec2f ParticleController::flowLookUp(Vec2f lookup){
 	int column = constrain(lookup.x/mXRes, 0, mXRes-1);
 	int row = constrain(lookup.y/mYRes, 0, mYRes-1);
 
-	return Vec2f(0, 0);
+//	return Vec2f(0, 0);
+    return field.at(column).at(row); //NOTE: working on
 }
 */
 

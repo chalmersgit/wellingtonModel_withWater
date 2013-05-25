@@ -17,13 +17,14 @@ public:
     void update();
     void draw();
 
-	//void follow();
+    //void follow();
 
 	ParticleController* mParticleController;
 
     ci::Vec2f mLoc;
     ci::Vec2f mVel;
 	ci::Vec2f mAcc;
+    ci::Vec2f mDesired;
 
 	float mMaxForce;
 	float mMaxSpeed;

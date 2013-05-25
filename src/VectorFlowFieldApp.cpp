@@ -82,12 +82,12 @@ void VectorFlowFieldApp::draw()
 	/*
     if(mDrawImage){
         mTexture.enableAndBind();
-        gl::draw(mTexture, getWindowBounds());
+        gl::draw(mTexture, getWindowBounds()); //NOTE: this is the image, dont really need, keeping for debugging
     }
      */
     
     /*
-    if(mDrawParticles){
+    if(mDrawParticles){                 //NOTE: this is the flow field
         glDisable(GL_TEXTURE_2D);
         mParticleController->draw();
     }

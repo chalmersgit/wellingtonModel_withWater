@@ -28,11 +28,11 @@ public:
 	void printFlow();
     Particle** createFlowField(int arraySizeX, int arraySizeY);
 
-    //Vec2f flowLookUp(ci::Vec2f);
+//    Vec2f flowLookUp(ci::Vec2f);
 
     list<Particle> mParticles;
 
-	//Vec2f mParticleLookUp[][];
+//    Vec2f mParticleLookUp[][];
     
     int mXRes, mYRes;
     
