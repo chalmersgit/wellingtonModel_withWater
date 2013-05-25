@@ -14,26 +14,24 @@
 
 
 class Particle {
-public:
-    Particle();
-    Particle(ci::Vec2f, ci::Vec2f);
-    void update(const ci::Channel32f &channel, const ci::Vec2f &windDirectionr);
-    void draw();
-
-    ci::Vec2f mLoc;
-    ci::Vec2f mDir;
+private: 
+	ci::Vec2f mLoc;
+	ci::Vec2f mDir;
 	ci::Vec2f mRotationVector;
 
-    float mRadius;
-
+public:
+	Particle();
+	Particle(ci::Vec2f, ci::Vec2f);
+	void update(const ci::Channel32f &channel, const ci::Vec2f &windDirectionr);
+	void draw();
 	//Getters
-	ci::Vec2f getLocation(){
-		return mLoc;
-   }
+	ci::Vec2f getLocation();
+	ci::Vec2f getDirection();
+	ci::Vec2f getRotation();
 
-	ci::Vec2f getDirection(){
-		return mDir;
-   }
+
+	float mRadius;
+
 
 };
 

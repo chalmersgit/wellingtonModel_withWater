@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -47,7 +47,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\include;..\..\..\..\cinder_0.8.4_mac\include;..\..\..\..\cinder_0.8.4_mac\boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Cinder\cinder\boost;C:\Cinder\cinder\include;..\include;..\..\..\..\cinder_0.8.4_mac\include;..\..\..\..\cinder_0.8.4_mac\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -58,11 +58,11 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\..\..\cinder_0.8.4_mac\include;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Cinder\cinder\include;..\..\..\..\cinder_0.8.4_mac\include;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>cinder_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\..\..\cinder_0.8.4_mac\lib;..\..\..\..\cinder_0.8.4_mac\lib\msw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Cinder\cinder\lib\msw;C:\Cinder\cinder\lib;..\..\..\..\cinder_0.8.4_mac\lib;..\..\..\..\cinder_0.8.4_mac\lib\msw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -74,7 +74,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;..\..\..\..\cinder_0.8.4_mac\include;..\..\..\..\cinder_0.8.4_mac\boost</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Cinder\cinder\boost;C:\Cinder\cinder\include;..\include;..\..\..\..\cinder_0.8.4_mac\include;..\..\..\..\cinder_0.8.4_mac\boost</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader>
@@ -86,11 +86,11 @@
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
     </ProjectReference>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>..\..\..\..\cinder_0.8.4_mac\include;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Cinder\cinder\include;..\..\..\..\cinder_0.8.4_mac\include;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>cinder.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\..\..\cinder_0.8.4_mac\lib;..\..\..\..\cinder_0.8.4_mac\lib\msw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Cinder\cinder\lib\msw;C:\Cinder\cinder\lib;..\..\..\..\cinder_0.8.4_mac\lib;..\..\..\..\cinder_0.8.4_mac\lib\msw;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <GenerateMapFile>true</GenerateMapFile>
       <SubSystem>Windows</SubSystem>
@@ -104,14 +104,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\CloudController.cpp" />
+    <ClCompile Include="..\src\Particle.cpp" />
+    <ClCompile Include="..\src\ParticleController.cpp" />
+    <ClCompile Include="..\src\VectorFlowFieldApp.cpp" />
+    <ClCompile Include="..\src\waterModule.cpp" />
     <ClCompile Include="..\src\wellingtonModelApp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\CloudController.h" />
+    <ClInclude Include="..\include\Particle.h" />
+    <ClInclude Include="..\include\ParticleController.h" />
     <ClInclude Include="..\include\Resources.h" />
+    <ClInclude Include="..\include\VectorFlowFieldApp.h" />
+    <ClInclude Include="..\src\waterModule.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources.rc" />
-  </ItemGroup>  
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

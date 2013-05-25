@@ -21,11 +21,11 @@ void VectorFlowFieldApp::setup()
 {
 	mPrevTime = 0.0f;
 	mTheta = 0.1f * (M_PI/180); 
-    mWindDirection = Vec2f(1.0f, 0.0f);
-    mChannel = Channel32f(loadImage(loadResource(RES_WELLINGTON_IMG)));
-    mTexture = mChannel;
-    
-    mParticleController = new ParticleController(RESOLUTION);
+	mWindDirection = Vec2f(1.0f, 0.0f);
+	mChannel = Channel32f(loadImage(loadResource(RES_WELLINGTON_IMG)));
+	mTexture = mChannel;
+	
+	mParticleController = new ParticleController(RESOLUTION);
 
 	//mCloudController = new CloudController(Vec2f(0, 0), 0.0f, 0.0f, mParticleController);
    
@@ -34,20 +34,20 @@ void VectorFlowFieldApp::setup()
 	for(int i = 0; i < 10; ++i){
 		Vec2f loc = Vec2f(Rand::randFloat(0.0f, app::getWindowWidth()), Rand::randFloat(0.0f, app::getWindowHeight()));
 
-		CloudController* cloudController = new CloudController(loc, Rand::randFloat(2.0, 5.0), Rand::randFloat(0.1f, 0.5f), mParticleController);
+		CloudController* cloudController = new CloudController(loc, Rand::randFloat(0.1, 1.0), Rand::randFloat(0.1f, 0.5f), mParticleController);
 		mCloudControllers.push_back(cloudController);
 	}
 		
-    mDrawParticles = true;
-    mDrawImage = false;
-    
+	mDrawParticles = true;
+	mDrawImage = false;
+	
 }
 
 
 void VectorFlowFieldApp::update()
 {
-    if(! mChannel) return;
-    
+	if(! mChannel) return;
+	
 	if((timeline().getCurrentTime() - mPrevTime) > 0.01){
 
 		float newX = mWindDirection.x*cos(mTheta) - mWindDirection.y*sin(mTheta);
@@ -62,44 +62,70 @@ void VectorFlowFieldApp::update()
 		mPrevTime = timeline().getCurrentTime();
 	}
 
-    mParticleController->update(mChannel, mWindDirection);
+	mParticleController->update(mChannel, mWindDirection);
 	
 	if(!mCloudControllers.empty()){
-	for(int i = 0; i < mCloudControllers.size(); i++){
-		mCloudControllers[i]->update();
+		for(int i = 0; i < mCloudControllers.size(); i++){
+			//Steer the cloud controller
+			Vec2f desiredDir = mParticleController->flowLookUp(mCloudControllers[i]->mLoc);
+			desiredDir = desiredDir * mCloudControllers[i]->mMaxSpeed;
+			Vec2f steer = desiredDir - mCloudControllers[i]->mVel;
+			steer.limit(mCloudControllers[i]->mMaxForce);
+			mCloudControllers[i]->applyForce(steer);
+			
+			//update its position
+			mCloudControllers[i]->update();
 		}
 	}
 }
 
 void VectorFlowFieldApp::draw()
 {
-    
-    gl::setViewport(getWindowBounds());
-    gl::setMatricesWindow(getWindowSize());  //NOTE: remeber this big dog error thrower
+	
+	gl::setViewport(getWindowBounds());
+	gl::setMatricesWindow(getWindowSize());  //NOTE: remeber this big dog error thrower
 //    gl::setMatricesWindowPersp(getWindowSize()); //NOTE: doesnt seem to work as well
-    gl::color(1, 1, 1);
-    
+	gl::color(1, 1, 1);
+	
 	/*
-    if(mDrawImage){
-        mTexture.enableAndBind();
-        gl::draw(mTexture, getWindowBounds()); //NOTE: this is the image, dont really need, keeping for debugging
-    }
-     */
-    
-    /*
-    if(mDrawParticles){                 //NOTE: this is the flow field
-        glDisable(GL_TEXTURE_2D);
-        mParticleController->draw();
-    }
-     */
+	if(mDrawImage){
+		mTexture.enableAndBind();
+		gl::draw(mTexture, getWindowBounds()); //NOTE: this is the image, dont really need, keeping for debugging
+	}
+	 */
+	
+	
+
+
+	if(mDrawParticles && mDrawFlowField){                 //NOTE: this is the flow field
+		glDisable(GL_TEXTURE_2D);
+		mParticleController->draw();
+	}
+	 
 
 	if(!mCloudControllers.empty()){
 		for(int i = 0; i < mCloudControllers.size(); i++){
 			mCloudControllers[i]->draw();
 		}
 	}
-    
-    
+}
+
+void VectorFlowFieldApp::setDrawFlow(bool b){
+	mDrawFlowField = b;
+}
+
+void VectorFlowFieldApp::invokePrintFlowField(){
+	mParticleController->printFlowLookUpTable();
+	
+	if(!mCloudControllers.empty()){
+		for(int i = 0; i < mCloudControllers.size(); i++){
+			mParticleController->flowLookUp(mCloudControllers[i]->mLoc);
+		}
+	}
+}
+
+void VectorFlowFieldApp::cloudControllerFollow(){
+	
 }
 
 //CINDER_APP_BASIC( VectorFlowFieldApp, RendererGl )

@@ -23,25 +23,27 @@ CloudController::CloudController(){
 
 
 CloudController::CloudController(Vec2f loc, float ms, float mf, ParticleController* pc){
-    mLoc = loc;
+	mLoc = loc;
 	mMaxForce = mf;
 	mMaxSpeed = ms;
 	mParticleController = pc;
 
 	mAcc = Vec2f(1.0f, 0.0f);
 	mVel = Vec2f(0.0f, 0.0f);
-    mRadius = 10.0f;
-    
+	mRadius = 10.0f;
+	
 }
 
 void CloudController::update(){
-
+	
 	mVel += mAcc;
 	mVel.limit(mMaxSpeed);
 
+	//console() << mAcc << ", " << mVel << endl;
+		
 	mLoc += mVel;
 
-	//?
+	//? 
 	mAcc *= 0.001f;
 	
 }
@@ -50,12 +52,13 @@ void CloudController::draw(){
 	//console() << mLoc << endl;
 	gl::color(1.0, 0.0, 0.0);
 	Rectf rect(mLoc.x, mLoc.y, mLoc.x + mRadius, mLoc.y + mRadius);
-    gl::drawSolidRect(rect);
-
-
-
+	gl::drawSolidRect(rect);
 }
+	
 
+void CloudController::applyForce(Vec2f force){
+	mAcc = mAcc + force;
+}
 /*
 void CloudController::follow(){
 

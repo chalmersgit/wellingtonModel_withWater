@@ -1,5 +1,16 @@
 #include "cinder/CinderResources.h"
-
+#include "..\include\Resources.h"
 ID ICON "cinder_app_icon.ico"
 
-//RES_MY_RESOURCE
+RES_WELLINGTON_IMG		
+RES_WELLINGTON_IMG_ALPHA
+
+RES_PASS_THRU_VERT		
+RES_GPGPU_FRAG		
+RES_REFRACTION_FRAG	
+
+
+RES_TEXTURE
+
+RES_WELLINGTON_OBJ
+

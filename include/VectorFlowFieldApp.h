@@ -30,22 +30,27 @@ public:
 	void setup();
 	void update();
 	void draw();
-    
-    Channel32f mChannel;
-    gl::Texture mTexture;
-    
-    
-    ParticleController* mParticleController;
-    
+	void setDrawFlow(bool b);
+	void invokePrintFlowField();
+	void cloudControllerFollow();
+
+
+	Channel32f mChannel;
+	gl::Texture mTexture;
+	
+	
+	ParticleController* mParticleController;
+	
 	vector<CloudController*> mCloudControllers;
 	//CloudController* mCloudController;
-    
-    bool mDrawParticles;
-    bool mDrawImage;
-    
-    Vec2i mMouseLoc;
-    Vec2f mWindDirection;
-    
+	
+	bool mDrawParticles;
+	bool mDrawImage;
+	bool mDrawFlowField;
+	
+	Vec2i mMouseLoc;
+	Vec2f mWindDirection;
+	
 	float mTheta;
 	float mPrevTime;
 };
