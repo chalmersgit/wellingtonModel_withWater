@@ -86,10 +86,12 @@ void VectorFlowFieldApp::draw()
     }
      */
     
+    /*
     if(mDrawParticles){
         glDisable(GL_TEXTURE_2D);
         mParticleController->draw();
     }
+     */
 
 	if(!mCloudControllers.empty()){
 		for(int i = 0; i < mCloudControllers.size(); i++){
